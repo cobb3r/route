@@ -1,0 +1,83 @@
+body {
+background: skyblue;
+align-items: center;
+}
+
+#timer, #buttons, header, #calculation, #distances {
+display: flex;
+justify-content: center;
+}
+
+#start, #stop, #clear {
+height: 50px;
+width: 150px;
+border: 2px solid #c36cbb;
+background: transparent;
+color: #c36cbb;
+margin-right: 5px;
+cursor: pointer;
+}
+
+#calculator {
+height: 50px;
+width: 150px;
+border: 2px solid red;
+background: transparent;
+color: red;
+margin-top: 5px;
+cursor: pointer;
+}
+
+#calculator:hover {
+background: yellow;
+color: black;
+}
+
+#start:hover {
+background: green;
+color: black;
+}
+
+#stop:hover {
+background: red;
+color: black;
+}
+
+#clear:hover {
+background: blue;
+color: black;
+}
+
+#clock {
+color: #c36cbb;
+font-family: sans-serif;
+}
+
+#title1 {
+font-family: sans-serif;
+color: red;
+}
+
+#calc {
+display: flex;
+text-align: center;
+justify-content: center;
+}
+
+#result {
+width: 800px;
+height: 400px;
+background: red;
+margin-top: 20vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+#average {
+color: black;
+font-family: sans-serif;
+margin: auto;
+font-size: 60px;
+}
