@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="location.js"></script>
+<link rel="stylesheet" type="text/css" href="locStyle.css">
+<style>
+#map {
+        height: 300px;
+        width: 70%;  
+        margin: auto;
+       }
+    </style>
+</head>
+<body>
+<div id="container">
+<header id="header">
+<div id="title">
+<h2 id="title1">Activity Tracker</h2>
+</div>
+</header>
+<div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+      var directionsService = new google.maps.DirectionsService;
+      var directionsDisplay = new google.maps.DirectionsRenderer;
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 54.229505, lng: -4.547397},
+          zoom: 9
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWyTd_yscYUnCSR9qvcQIFVdJxkx5tx-Q&callback=initMap&libraries=geometry"></script>
+<script type="text/javascript">
+function myFunction() {
+document.getElementById("container").style.display = 'none';
+document.getElementById("calc").style.display = 'flex';
+let c = document.getElementById("forDistance").textContent;
+let d = document.getElementById("clock").textContent;
+let e = c / d;
+e = e * 3.6
+document.getElementById("average").innerHTML = "Average Speed: " + Math.floor(e) + " KPH";
+};
+</script>
+<div id="calculation">
+<button onclick="myFunction()" id="calculator">Calculate</button>
+</div>
+<div id="timed">
+<div id="timer">
+<h1 id="clock"><time>00</time></h1>
+</div>
+<div id="buttons">
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="clear">Clear</button>
+</div>
+</div>
+<div id="distances">
+<h3 id="distanceTotal"></h3>
+<p id="forDistance" style="display: none;"></p>
+<p id="distanceP" style="display: none;"></p>
+<p id="demo" style="display: none;"></p>
+<p id="demo1" style="display: none;"></p>
+</div>
+</div>
+<div id="calc" style="display: none;">
+<div id="result">
+<p id="average"></p>
+</div>
+</div>
+</body>
+</html>
